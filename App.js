@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 import Camera from './src/components/Camera';
 import Colors from './src/data/Colors';
 
@@ -11,6 +12,10 @@ export default class App extends Component {
       bgColor: Colors[0],
       click: 0
     };
+  }
+
+  componentDidMount() {
+    SplashScreen.hide();
   }
 
   changeColor() {
